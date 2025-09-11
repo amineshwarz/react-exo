@@ -3,7 +3,7 @@ import React from 'react'
 const Wrapper = ({children}) => {
   return (
     <div style={{
-        backgroundColor: 'pink', 
+        backgroundColor: '#90e0ef', 
         width: '400px', 
         padding: '5px', 
         margin: '10px auto',

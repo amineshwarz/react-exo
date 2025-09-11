@@ -1,9 +1,17 @@
 import React from 'react'
 
-const MyHeader = ({ title, titlecolor, subtitlecolor, subtitle }) => {
+
+
+const MyHeader = ({ title, titlecolor, subtitlecolor, subtitle}) => {
+
+
+
   return (
     <>
-        <h1 style={{ color: titlecolor}} > 
+        <h1 style={{ color: titlecolor}} 
+        //  onMouseOver={test}  
+            // onClick={click}
+         > 
             {title} 
         </h1>
 
