@@ -12,7 +12,7 @@ import Wrapper from './Wrapper.jsx';
 
       <Wrapper>
         <p> Marque: 
-        <span style={{textDecoration: 'underline'}}> {children}  </span>
+        <span style={{fontWeight: 'bold'}}> {children}  </span>
         </p>
         <p > Model:  
           <span style={{fontWeight: 'bold'}}>   {model} </span>
