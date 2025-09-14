@@ -1,17 +1,17 @@
 import { Component } from 'react';
-import Mycars from './components/myCars';
+import Amine from './components/Amine';
 import './App.css';
 
 class App extends Component {
 
   state = {
-    titre: 'Arnautomobile Collection'
+    titre: null,
   }
 
   render() {
     return (
       <div className='App'>
-        <Mycars title={this.state.titre} />
+        <Amine />
       </div>
     )
   }
