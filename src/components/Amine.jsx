@@ -26,10 +26,17 @@ class Amine extends Component {
                 <h1>Amine</h1>
                 <button onClick={this.ordrePapa}>Donne l'ordre</button>
                 <p>{this.state.messageAmine}</p>
-                <hr />
-                <Arthur name="Toto" letState={this.state} />
-                <Arthur name="Toto" letState={this.state} reponseArthur={this.reponseToto} />
-                <button onClick={this.reponseArthur} disabled={this.state.messageAmine === null ? true : false}>Réponse</button>
+                <hr /><br></br>
+
+
+
+
+                <Arthur name="Arthur"
+                        leState={this.state}
+                        reponseArthur={this.reponseArthur} 
+                />
+                
+                        
             
             </div>
         )
