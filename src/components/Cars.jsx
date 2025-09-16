@@ -1,3 +1,10 @@
+import React from 'react';
+import Wrapper from './Wrapper.jsx';
+import car1 from './5ece697eaa71d_20200527_144439.jpg';
+
+import car3 from './A7307796.jpg';
+
+
 const Car = ({color, children, year, age}) => {
 
     const colorInfo = color ? <p> Couleur:  
@@ -7,8 +14,8 @@ const Car = ({color, children, year, age}) => {
 
     if (children) {
         return (
-            <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'} }>
-                
+            
+            <Wrapper>
                 <p>Marque: 
                     <span style={{fontWeight:  'bold'}}> {children} </span>
                 </p>
@@ -22,12 +29,15 @@ const Car = ({color, children, year, age}) => {
                     
                 </p>
                 {colorInfo}
-                
-            </div>
+
+                <img src={car1}/>
+
+                <img src={car3}/>
+            </Wrapper>
+            
         )
     }
 
-    // return null // ce return est Facultatif
 }
 
 export default Car

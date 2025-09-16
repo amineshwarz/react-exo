@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Car from './Cars';
-import MyHeader from './MyHeader';
+import MyHeader from '../components/MyHeader';
 import Wrapper from './Wrapper';
 
 

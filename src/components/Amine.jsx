@@ -8,36 +8,39 @@ class Amine extends Component {
         messageArthur: null
     }
 
-    ordrePapa =()=>{
-       this.setState({
-        messageAmine: 'va faire tes devoirs',
-       })
-    }
+    // ordrePapa =()=>{
+    //    this.setState({
+    //     messageAmine: 'va faire tes devoirs',
+    //    })
+    // }
 
-    reponseArthur =()=>{
-       this.setState({
-        messageArthur: 'Daccord papa',
-       })
-    }
+    // reponseArthur =()=>{
+    //     this.setState({
+    //      messageArthur: 'Daccord papa',
+    //     })
+    //  }
+
+
+    orderPapa = msg => this.setState({ messageAmine: msg, hidden:false });
+    reponseArthur = msg => this.setState({ messageArthur: msg });
+    
+
+
+
+
 
     render() {
         return (
             <div>
                 <h1>Amine</h1>
-                <button onClick={this.ordrePapa}>Donne l'ordre</button>
+                <button onClick={()=> this.orderPapa('va faire tes devoir  !')}>Donne l'ordre</button>
                 <p>{this.state.messageAmine}</p>
                 <hr /><br></br>
 
-
-
-
                 <Arthur name="Arthur"
                         leState={this.state}
-                        reponseArthur={this.reponseArthur} 
-                />
-                
-                        
-            
+                        reponseArthurProps={this.reponseArthur} 
+                />                      
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Car from './Cars'
 import Welcome from './Welcome'
+import MyHeader from './MyHeader'
 
 class Mycars extends Component {
 
@@ -49,9 +50,10 @@ class Mycars extends Component {
         
         return (
             <div>
-                <h1>{this.props.title}</h1>
+                <MyHeader title={this.props.titre}/>
 
                 <button onClick={this.addTenYears}> +18 </button>
+
 
                 {
                     this.state.cars.map(({name, color, year}, index) => {
