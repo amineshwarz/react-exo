@@ -1,11 +1,8 @@
 import React from 'react';
 import Wrapper from './Wrapper.jsx';
-import car1 from './5ece697eaa71d_20200527_144439.jpg';
-
-import car3 from './A7307796.jpg';
 
 
-const Car = ({color, children, year, age}) => {
+const Car = ({color, children, year, age, img}) => {
 
     const colorInfo = color ? <p> Couleur:  
                                     <span style={{fontWeight:  'bold'}}>{color}</span> 
@@ -30,9 +27,18 @@ const Car = ({color, children, year, age}) => {
                 </p>
                 {colorInfo}
 
-                <img src={car1}/>
-
-                <img src={car3}/>
+                <img src={img}/>
+                
+                <svg width="100" height="100" src='./mercedes-benz-svgrepo-com.svg'>
+                    <g>
+                        <title>Background</title>
+                        <rect fill="#ffffff"  id="cancas_background"/>
+                    </g>
+                    <g>
+                        <title>Layer 1</title>
+                        <rect fill="#222222" fill-rule="nonzero" strokeWidth="0" x="0" y="0" width="100" height="100"/>
+                    </g>
+                </svg>
             </Wrapper>
             
         )

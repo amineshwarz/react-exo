@@ -2,6 +2,9 @@ import { Component } from 'react'
 import Car from './Cars'
 import Welcome from './Welcome'
 import MyHeader from './MyHeader'
+import car1 from './merco.jpg'
+import car2 from './opel.jpg'
+import car3 from './A3.jpg'
 
 class Mycars extends Component {
 
@@ -10,17 +13,20 @@ class Mycars extends Component {
             
             {   name: "Arnocedes", 
                 color: "white", 
-                year: 2018
+                year: 2018,
+                img :car1
             },
 
             {   name: "Arnopel", 
                 color: "red", 
-                year: 2020
+                year: 2020,
+                img :car2
             },
 
             {   name: "Arnaudi", 
                 color: "green", 
-                year: 2024
+                year: 2024,
+                img :car3
             }
         ]
     }
@@ -56,12 +62,13 @@ class Mycars extends Component {
 
 
                 {
-                    this.state.cars.map(({name, color, year}, index) => {
+                    this.state.cars.map(({name, color, year, img}, index) => {
                         return (
                             <Car    key= {index}
                                     color= {color} 
                                     year= {year}
                                     age= {this.getAge(year)}
+                                    img= {img}
                             > 
                                 {name}
                             </Car>
