@@ -2,7 +2,8 @@ import React from 'react';
 import Wrapper from './Wrapper.jsx';
 
 
-const Car = ({color, children, year, age, img}) => {
+
+const Car = ({color, children, year, age, img, svg}) => {
 
     const colorInfo = color ? <p> Couleur:  
                                     <span style={{fontWeight:  'bold'}}>{color}</span> 
@@ -13,32 +14,27 @@ const Car = ({color, children, year, age, img}) => {
         return (
             
             <Wrapper>
-                <p>Marque: 
-                    <span style={{fontWeight:  'bold'}}> {children} </span>
-                </p>
 
-                <p>Année: 
-                    <span style={{fontWeight:  'bold'}}>{ year} </span>
-                    
-                </p>
-                <p>Age :
-                    <span style={{fontWeight:  'bold'}}>{ age} </span>
-                    
-                </p>
-                {colorInfo}
+                    <img src={svg} width='40' height='100' style={{ display: 'block', margin: '0 auto' }}/>
+                    <p>Marque: 
+                        <span style={{fontWeight:  'bold'}}> {children} </span>
+                    </p>
 
-                <img src={img}/>
-                
-                <svg width="100" height="100" src='./mercedes-benz-svgrepo-com.svg'>
-                    <g>
-                        <title>Background</title>
-                        <rect fill="#ffffff"  id="cancas_background"/>
-                    </g>
-                    <g>
-                        <title>Layer 1</title>
-                        <rect fill="#222222" fill-rule="nonzero" strokeWidth="0" x="0" y="0" width="100" height="100"/>
-                    </g>
-                </svg>
+                    <p>Année: 
+                        <span style={{fontWeight:  'bold'}}>{ year} </span>
+                        
+                    </p>
+                    <p>Age :
+                        <span style={{fontWeight:  'bold'}}>{ age} </span>
+                        
+                    </p>
+                    {colorInfo}
+
+                    <img src={img}/>
+                    
+                    
+
+
             </Wrapper>
             
         )
@@ -47,3 +43,21 @@ const Car = ({color, children, year, age, img}) => {
 }
 
 export default Car
+
+
+
+
+                    {/* <svg width="50" height="50" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <path fillRule="evenodd" clipRule="evenodd" d="M30 16C30 8.3 23.7 2 16 2C8.3 2 2 8.3 2 16C2 23.7 
+                            8.3 30 16 30C23.7 30 30 23.7 30 16ZM16 27.725C19.1063 27.725 22.0813 26.5 24.2688 24.3125C24.9775 23.6037 25.5803 22.8243 
+                            26.073 21.9911L15.9563 17.8375L5.90192 21.9655C6.39428 22.7988 6.99228 23.5735 7.6875 24.2687C9.91875 26.5 12.8938 27.725 
+                            16 27.725ZM5.62145 21.4629C4.74458 19.7961 4.275 17.9232 4.275 16C4.275 12.8937 5.5 9.91874 7.73125 7.77499C9.81269 5.69355 
+                            12.6071 4.48355 15.5492 4.3711L14.2063 14.8625L5.62145 21.4629ZM16.138 4.36327C19.193 4.39774 22.0706 5.57681 24.2688 
+                            7.77499C26.4563 9.96249 27.6813 12.9375 27.6813 16.0437C27.6813 17.9614 27.231 19.8124 26.3615 21.4732C24.8873 20.3034 
+                            17.9688 14.8188 17.9688 14.8188L16.138 4.36327Z" fill="#283544">
+                            </path> 
+                        </g>
+                    </svg> */}

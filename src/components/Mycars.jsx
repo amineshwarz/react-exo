@@ -5,6 +5,10 @@ import MyHeader from './MyHeader'
 import car1 from './merco.jpg'
 import car2 from './opel.jpg'
 import car3 from './A3.jpg'
+import svg1 from './mercedes-benz-svgrepo-com.svg'
+import svg2 from './opel-svgrepo-com.svg'
+import svg3 from './audi-svgrepo-com.svg'
+
 
 class Mycars extends Component {
 
@@ -14,19 +18,22 @@ class Mycars extends Component {
             {   name: "Arnocedes", 
                 color: "white", 
                 year: 2018,
-                img :car1
+                img :car1,
+                svg :svg1
             },
 
             {   name: "Arnopel", 
                 color: "red", 
                 year: 2020,
-                img :car2
+                img :car2,
+                svg :svg2
             },
 
             {   name: "Arnaudi", 
                 color: "green", 
                 year: 2024,
-                img :car3
+                img :car3,
+                svg :svg3
             }
         ]
     }
@@ -55,33 +62,30 @@ class Mycars extends Component {
     render() {
         
         return (
-            <div>
+            <>
                 <MyHeader title={this.props.titre}/>
-
                 <button onClick={this.addTenYears}> +18 </button>
-
-
-                {
-                    this.state.cars.map(({name, color, year, img}, index) => {
-                        return (
-                            <Car    key= {index}
-                                    color= {color} 
-                                    year= {year}
-                                    age= {this.getAge(year)}
-                                    img= {img}
-                            > 
-                                {name}
-                            </Car>
-                        )
-                    })
-                } 
-
+                <div style={{display: 'flex', justifyContent: 'center'}}>                  
+                    {
+                        this.state.cars.map(({name, color, year, img, svg}, index) => {
+                            return (
+                                <Car    key= {index}
+                                        color= {color} 
+                                        year= {year}
+                                        age= {this.getAge(year)}
+                                        img= {img}
+                                        svg= {svg}
+                                > 
+                                    {name}
+                                </Car>
+                            )
+                        })
+                    } 
+                
+                </div>
                 <Welcome />
 
-
-
-            </div>
-           
+            </>
         )
        
     }

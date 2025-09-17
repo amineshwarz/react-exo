@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Amine from './components/Amine';
 import './App.css';
 import Mycars from './components/Mycars';
+import Form from './components/Form'
 
 class App extends Component {
 
@@ -12,10 +13,10 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        
+
         <Mycars 
-        titre={this.state.titre}/>
-        <br/>
+          titre={this.state.titre}/>
+        <Form/>
 
         <Amine />
       </div>

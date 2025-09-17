@@ -35,12 +35,13 @@ class Amine extends Component {
                 <h1>Amine</h1>
                 <button onClick={()=> this.orderPapa('va faire tes devoir  !')}>Donne l'ordre</button>
                 <p>{this.state.messageAmine}</p>
-                <hr /><br></br>
+                <hr width="200" style={{ display: 'block', margin: '0 auto' }} /><br></br>
 
                 <Arthur name="Arthur"
                         leState={this.state}
                         reponseArthurProps={this.reponseArthur} 
-                />                      
+                /> 
+                <hr width="200" style={{ display: 'block', margin: '0 auto' }}/><br></br>                     
             </div>
         )
     }
